@@ -13,12 +13,13 @@
             color: #333;
         }
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 20px auto;
             padding: 20px;
             background: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
+            text-align: center;
         }
         h1, h2 {
             text-align: center;
@@ -26,21 +27,31 @@
         .section {
             margin-bottom: 30px;
         }
-        .portfolio-item {
-            margin-bottom: 15px;
+        .portfolio-table {
+            width: 100%;
             display: flex;
-            align-items: center;
+            justify-content: space-between;
         }
-        .portfolio-item img {
-            width: 100px;
-            height: auto;
-            margin-right: 15px;
-            border-radius: 5px;
+        .portfolio-item {
+            width: 30%;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            position: relative;
+            height: 200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         .portfolio-item a {
             text-decoration: none;
-            color: #007acc;
+            color: white;
             font-weight: bold;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -49,31 +60,29 @@
         <h1>Cason Harrison</h1>
         <p>Welcome to my personal website, where I showcase my projects, share blog posts, and introduce myself.</p>
         
-        <nav>
-            <ul>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about.html">About Me</a></li>
-            </ul>
-        </nav>
-
         <div class="section">
             <h2>Portfolio</h2>
-            <div class="portfolio-item">
-                <img src="images/procedural_content.png" alt="Procedural Content Generation">
-                <a href="https://github.com/CasonHarrison/Procedural-Content-Generation-Projects" target="_blank">Procedural Content Generation Projects</a>
-                <p>This is a repo for my procedural content generation scripts done in Unity, categorized in folders by topic.</p>
+            <div class="portfolio-table">
+                <div class="portfolio-item" style="background-image: url('images/procedural_content.png');">
+                    <a href="https://github.com/CasonHarrison/Procedural-Content-Generation-Projects" target="_blank">Procedural Content Generation Projects</a>
+                </div>
+                <div class="portfolio-item" style="background-image: url('images/custom_shader.png');">
+                    <a href="https://github.com/CasonHarrison/Custom-Unity-Lighting-Shader" target="_blank">Custom Unity Lighting Shader</a>
+                </div>
+                <div class="portfolio-item" style="background-image: url('images/trainthumbnail.png');">
+                    <a href="https://github.com/CasonHarrison/SpiritedAwayTrainScene" target="_blank">Spirited Away Train Scene</a>
+                </div>
             </div>
-            <div class="portfolio-item">
-                <img src="images/custom_shader.png" alt="Custom Unity Lighting Shader">
-                <a href="https://github.com/CasonHarrison/Custom-Unity-Lighting-Shader" target="_blank">Custom Unity Lighting Shader</a>
-                <p>This is my custom Unity standard lighting shader project using HLSL.</p>
-            </div>
-            <div class="portfolio-item">
-                <img src="images/trainthumbnail.png" alt="Spirited Away Train Scene">
-                <a href="https://github.com/CasonHarrison/SpiritedAwayTrainScene" target="_blank">Spirited Away Train Scene</a>
-                <p>This is my repository for my Spirited Away train scene, recreated using shaders in C++.</p>
-            </div>
+        </div>
+
+        <div class="section">
+            <h2>Blog</h2>
+            <p>Coming soon...</p>
+        </div>
+
+        <div class="section">
+            <h2>About Me</h2>
+            <p>Hi, I'm Cason Harrison, a developer passionate about procedural generation, computer graphics, and shader programming. Check out my work and feel free to connect!</p>
         </div>
     </div>
 </body>
